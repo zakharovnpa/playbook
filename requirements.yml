@@ -1,0 +1,13 @@
+---
+- src: git@github.com:zakharovnpa/filebeat_roles.git
+  scm: git
+  version: "1.0.0"
+  name:
+- src: git@github.com:zakharovnpa/kibana_roles.git
+  scm: git
+  version: "1.0.0"
+  name: kibana_roles
+- src: git@github.com:zakharovnpa/filebeat_roles.git
+  scm: git
+  version: "1.0.0"
+  name: filebeat_roles
