@@ -1,0 +1,7 @@
+---
+- name: Assert elasticrole
+  hosts: all
+  roles:
+    - elasticsearch_roles
+    - kibana_roles
+    - filebeat_roles
