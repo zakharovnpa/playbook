@@ -1,7 +1,12 @@
 ---
 - name: Assert elasticrole
-  hosts: all
+- hosts: el-instance
   roles:
     - elasticsearch_roles
+- hosts: k-instance
+  roles:
     - kibana_roles
+- hosts: application-instance
+  roles:
     - filebeat_roles
+
