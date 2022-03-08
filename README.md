@@ -7,11 +7,15 @@ Repo for exercise "8.4 Работа с Roles"; Ansible roles Playbook
 ```yml
 ---
 - name: Assert elasticrole
-  hosts: all
+- hosts: el-instance
   roles:
     - elasticsearch_roles
+- hosts: k-instance
+  roles:
     - kibana_roles
-    - filebeat_roles              
+- hosts: application-instance
+  roles:
+    - filebeat_roles           
 ```
 
 * Файл `requirements.yml` позволяет с помощью команды `ansible-galaxy` загрузить и установить директории с файлами для ролей плейбука
@@ -23,7 +27,7 @@ Repo for exercise "8.4 Работа с Roles"; Ansible roles Playbook
   name: elasticsearch_roles
 - src: git@github.com:zakharovnpa/kibana_roles.git
   scm: git
-  version: "v1.0.0"
+  version: "v1.0.1"
   name: kibana_roles
 - src: git@github.com:zakharovnpa/filebeat_roles.git
   scm: git
